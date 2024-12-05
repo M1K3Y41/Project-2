@@ -1,0 +1,46 @@
+const https = require('https');
+
+function fetchGlobalCryptoStats() {
+    const url = 'https://api.coinlore.net/api/global/';
+
+    // Send GET request
+    https.get(url, (res) => {
+        let data = '';
+
+        // Collect data chunks
+        res.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        // Process complete response
+        res.on('end', () => {
+            try {
+                console.log("Response fetched successfully.");
+
+                // Parse JSON response
+                const stats = JSON.parse(data)[0];
+
+                // Display statistics
+                console.log("\n--- Global Cryptocurrency Statistics ---");
+                console.log(`Total Coins: ${stats.coins_count}`);
+                console.log(`Active Markets: ${stats.active_markets}`);
+                console.log(`Total Market Cap: $${Number(stats.total_mcap).toLocaleString()}`);
+                console.log(`Total Volume (24h): $${Number(stats.total_volume).toLocaleString()}`);
+                console.log(`Bitcoin Dominance: ${stats.btc_d}%`);
+                console.log(`Ethereum Dominance: ${stats.eth_d}%`);
+                console.log(`Market Cap Change (24h): ${stats.mcap_change}%`);
+                console.log(`Volume Change (24h): ${stats.volume_change}%`);
+                console.log(`Average Price Change (24h): ${stats.avg_change_percent}%`);
+                console.log(`All-Time High Market Cap: $${Number(stats.mcap_ath).toLocaleString()}`);
+                console.log(`All-Time High Volume: $${Number(stats.volume_ath).toLocaleString()}`);
+            } catch (err) {
+                console.error("Error parsing response data:", err.message);
+            }
+        });
+    }).on('error', (err) => {
+        console.error("Error fetching data:", err.message);
+    });
+}
+
+// Run the function
+fetchGlobalCryptoStats();
