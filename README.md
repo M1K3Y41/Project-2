@@ -1,6 +1,4 @@
 
-Here’s the revised README.md similar to the one you provided:
-
 Global Cryptocurrency Stats Fetcher
 This JavaScript script fetches and displays global cryptocurrency statistics from the Coinlore API.
 
