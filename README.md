@@ -18,15 +18,13 @@ Requirements
 Node.js: Version 12 or later
 No additional libraries are required (uses Node.js built-in https module).
 Setup Instructions
-Ensure you have Node.js installed. You can download it here.
+Ensure you have Node.js installed.
 Copy the script and save it as crypto_stats.js using any text editor (e.g., Notepad).
 Open a terminal, navigate to the directory containing the script, and run:
-bash
-Copy code
 node crypto_stats.js
 Example Output
-plaintext
-Copy code
+
+
 Response fetched successfully.
 
 --- Global Cryptocurrency Statistics ---
