@@ -2,17 +2,6 @@
 Global Cryptocurrency Stats Fetcher
 This JavaScript script fetches and displays global cryptocurrency statistics from the Coinlore API.
 
-Overview
-The script retrieves global cryptocurrency data such as:
-
-Total number of coins
-Active markets
-Total market capitalization
-24-hour trading volume
-Dominance of Bitcoin and Ethereum
-Market cap and volume changes over 24 hours
-All-time high market cap and trading volume
-The data is fetched using the Coinlore API and displayed in a readable format.
 
 Requirements
 Node.js: Version 12 or later
