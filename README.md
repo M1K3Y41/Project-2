@@ -11,6 +11,7 @@ Ensure you have Node.js installed.
 Copy the script and save it as crypto_stats.js using any text editor (e.g., Notepad).
 Open a terminal, navigate to the directory containing the script, and run:
 node crypto_stats.js
+Alternatively, copy the code and paste it into Node.js and run.
 Example Output
 
 
